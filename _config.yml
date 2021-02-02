@@ -16,16 +16,16 @@ minimal_mistakes_skin    : "mint" # "air", "aqua", "contrast", "dark", "dirt", "
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Cuong V. Nguyen"
+title                    : "Cuong's blog"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : #
+subtitle                 : "Welcome to my space!"
+name                     : "Cuong's blog"
 description              : # "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : "https://cuongvng.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+logo                     :  # path of logo image to display in the masthead
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -70,9 +70,9 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : &twitter "@cuongvng"
 facebook:
-  username               :
+  username               : &facebook "@cuongcl1215"
   app_id                 :
   publisher              :
 og_image                 : # Open Graph/Twitter default site image
@@ -93,10 +93,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "Contact"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : # "Hanoi, Vietnam"
+  name             : "Cuong V. Nguyen"
+  avatar           : "/assets/images/ava1.jpg"
+  bio              : "Learner, Developer, Contributor"
+  location         : "Hanoi, Vietnam"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -109,33 +109,42 @@ author:
       url: "https://twitter.com/cuongvng"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/cuongcl1215"
+      # url: "https://facebook.com/cuongcl1215"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cuongvng"
-    - label: "Instagram"
+    - label: "instagram.com/cuongvng"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/cuongvng/"
 
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:nguyencuongcl1215@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/cuongvng"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      url: "https://facebook.com/cuongcl1215"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cuongvng"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/cuongvng/"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook-square"
+      url: "https://facebook.com/cuongcl1215"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
     - label: "Bitbucket"
       icon: "fab fa-fw fa-bitbucket"
       # url:
-    - label: "Instagram"
+    - label: "@cuongvng"
       icon: "fab fa-fw fa-instagram"
       # url:
 
@@ -269,12 +278,41 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _docs
+  - scope:
+      path: ""
+      type: docs
+    values:
+      layout: single
+      read_time: false
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: false
+      share: true
+
+include: ["_pages", "_posts"]

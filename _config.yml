@@ -109,7 +109,7 @@ author:
       url: "https://twitter.com/cuongvng"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
-      # url: "https://facebook.com/cuongcl1215"
+      url: "https://facebook.com/cuongcl1215"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/cuongvng"
